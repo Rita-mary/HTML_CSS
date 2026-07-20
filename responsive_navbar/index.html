@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <span>TakeAbit</span>
+        </div>
+        <nav>
+            <ul class = "nav-lists">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            
+        </nav>
+
+        <div class="right-header">
+            <button class="login">Login</button>
+            
+            <button class="burger-btn" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+
+    </header>
+    <div class="ham">
+        <div class="nav-lists-big">
+                <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+                </ul>
+                <div>
+                <button class="login-big">Login</button>
+                </div>
+            </div>
+    </div>
+    <section>
+        
+    </section>
+
+    <script>
+        const burgerBtn = document.querySelector('.burger-btn');
+        const mobileMenu = document.querySelector('.ham')
+
+        burgerBtn.addEventListener("click",()=>{
+            mobileMenu.classList.toggle('open');
+            burgerBtn.classList.toggle('open');
+        })
+    </script>
+
+
+</body>
+</html>

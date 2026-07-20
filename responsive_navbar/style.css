@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+     
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    min-height: 100vh; 
+}
+
+header{
+    background-color: rgb(7, 14, 23);
+    box-shadow: 1px 5px 20px;
+    color: rgb(236, 245, 118);
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-lists{
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+.nav-lists a:hover{
+    /* color: rgb(236, 245, 118); */
+    background-color: rgb(236, 245, 118);
+    color: rgb(7, 14, 23);
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.nav-lists-big{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+.nav-lists-big a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-lists-big a:hover {
+    background-color: rgba(236, 245, 118, 0.1);
+    color: rgb(236, 245, 118);
+}
+
+.nav-lists-big ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.nav-lists-big li{
+    list-style-type: none;
+}
+
+.nav-lists li{
+    list-style-type: none;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.burger-btn {
+    display: none; 
+    background: none;
+    border: none;
+    color: rgb(236, 245, 118);
+    cursor: pointer;
+}
+
+
+
+
+.nav-lists a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.login{
+    background-color: rgb(236, 245, 118);
+    color: rgb(7, 14, 23);
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+
+.login-big {
+    background-color: rgb(236, 245, 118);
+    color: rgb(7, 14, 23);
+    border: none;
+    margin-top: 12px;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-big:hover {
+    background-color: rgb(155, 165, 21); 
+    color: rgb(3, 6, 10);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02); 
+    transition: all 0.2s ease; 
+}
+
+
+.login:hover{
+    background-color: rgb(155, 165, 21);
+    color: rgb(3, 6, 10);
+    box-shadow: 2px 2px 2px;
+    scale: 1.15;
+    /* cursor: not-allowed; */
+}
+
+section{
+    background-image: url(images/_.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* height: 1000px; */
+}
+
+.ham {
+    position: absolute;
+    top: 85px;                  
+    right: 20px;
+    width: 280px;               
+    background-color: rgb(13, 24, 37);
+    border: 1px solid rgba(236, 245, 118, 0.2); 
+    border-radius: 16px;       
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    padding: 24px;
+    z-index: 100;
+    display: none;
+}
+
+.burger-btn svg line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center; 
+}
+
+.burger-btn.open svg line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.burger-btn.open svg line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.open svg line:nth-child(3) {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+
+
+@media screen and (max-width:375px) {
+
+    .ham {
+        position: absolute;     
+        top: 80px;             
+        left: 0;                
+        right: 0;               
+        width: 100%;            
+        border-radius: 0;       
+        border-left: none;
+        border-right: none;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .nav-lists-big{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav-lists{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .burger-btn {
+        display: block;
+    }
+    .ham.open{
+        display: block;
+    }
+}
