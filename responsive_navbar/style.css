@@ -101,8 +101,15 @@ header{
     color: white;
 }
 
+.signs{
+    display: flex;
+    gap: 10px;
+}
+.signs-big{
+    display: grid;
+}
 
-.login{
+.login ,.sign-up{
     background-color: rgb(236, 245, 118);
     color: rgb(7, 14, 23);
     border: 1px solid white;
@@ -113,7 +120,7 @@ header{
 }
 
 
-.login-big {
+.login-big ,.sign-up-big{
     background-color: rgb(236, 245, 118);
     color: rgb(7, 14, 23);
     border: none;
@@ -126,7 +133,7 @@ header{
     cursor: pointer;
 }
 
-.login-big:hover {
+.login-big:hover ,.sign-up-big:hover{
     background-color: rgb(155, 165, 21); 
     color: rgb(3, 6, 10);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -135,7 +142,7 @@ header{
 }
 
 
-.login:hover{
+.login:hover, .sign-up:hover{
     background-color: rgb(155, 165, 21);
     color: rgb(3, 6, 10);
     box-shadow: 2px 2px 2px;
@@ -165,6 +172,10 @@ section{
     display: none;
 }
 
+#menu{
+    display: none;
+}
+
 .burger-btn svg line {
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center; 
@@ -188,7 +199,7 @@ section{
 
     .ham {
         position: absolute;     
-        top: 80px;             
+        top: 67px;             
         left: 0;                
         right: 0;               
         width: 100%;            
@@ -212,10 +223,19 @@ section{
     .login{
         display: none;
     }
+    .sign-up{
+        display: none;
+    }
     .burger-btn {
         display: block;
     }
-    .ham.open{
+    /* #menu:checked + .nav-lists-big{
+        display: block;
+    } */
+     #menu:checked + .ham{
         display: block;
     }
+    /* .ham.open{
+        display: block;
+    } */
 }

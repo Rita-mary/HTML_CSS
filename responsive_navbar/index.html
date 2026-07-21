@@ -20,21 +20,35 @@
             </ul>
             
         </nav>
-
+        
         <div class="right-header">
-            <button class="login">Login</button>
+            <div class="signs">
+                <button class="login">Login</button>
+                <button class="sign-up">Sign Up</button>
+            </div>
             
-            <button class="burger-btn" aria-label="Toggle Menu">
+            <!-- <label for="menu" class="menu-icon">
+                <button class="burger-btn" aria-label="Toggle Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </label> -->
+            <label for="menu" class="menu-icon burger-btn" aria-label="Toggle Menu" role="button" tabindex="0">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
-            </button>
+            </label>
+            
         </div>
-
-
+        
+        
     </header>
+    <input type="checkbox" id="menu">
     <div class="ham">
         <div class="nav-lists-big">
                 <ul>
@@ -43,8 +57,9 @@
                 <li><a href="">Services</a></li>
                 <li><a href="">Contact</a></li>
                 </ul>
-                <div>
+                <div class="signs-big">
                 <button class="login-big">Login</button>
+                <button class="sign-up-big">Sign Up</button>
                 </div>
             </div>
     </div>
@@ -52,7 +67,7 @@
         
     </section>
 
-    <script>
+    <!-- <script>
         const burgerBtn = document.querySelector('.burger-btn');
         const mobileMenu = document.querySelector('.ham')
 
@@ -60,7 +75,7 @@
             mobileMenu.classList.toggle('open');
             burgerBtn.classList.toggle('open');
         })
-    </script>
+    </script> -->
 
 
 </body>
