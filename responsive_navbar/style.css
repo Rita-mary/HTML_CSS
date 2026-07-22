@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
-     
 }
 
 body{
@@ -13,9 +11,58 @@ body{
     display: grid;
     grid-template-rows: auto 1fr; 
     min-height: 100vh; 
+    width: 100%;
 }
 
+/* --- HERO SECTION FIXED FOR MOBILE --- */
+.hero-section{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    gap: 20px;
+    padding: 20px 30px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.hero-img {
+    /* max-width: 100%; */
+    height: 500px;
+    width: 500px;
+    border-radius: 40px;
+}
+.hero-intro{
+    font-size: 62px;
+    line-height: 1.1;
+    font-weight: 800;
+    width: 100%;
+}
+
+.hero-desc{
+    color: #383737;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.hero-btn{
+    background-color: #000;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 20px 40px;
+    margin-top: 30px;
+    border: none;
+}
+
+/* .hero-section h1 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+} */
+
 header{
+    position: fixed; 
     background-color: rgb(7, 14, 23);
     box-shadow: 1px 5px 20px;
     color: rgb(236, 245, 118);
@@ -25,6 +72,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 100%;
 }
 
 .nav-lists{
@@ -34,7 +82,6 @@ header{
     align-items: center;
 }
 .nav-lists a:hover{
-    /* color: rgb(236, 245, 118); */
     background-color: rgb(236, 245, 118);
     color: rgb(7, 14, 23);
     border: 1px solid white;
@@ -93,9 +140,6 @@ header{
     cursor: pointer;
 }
 
-
-
-
 .nav-lists a{
     text-decoration: none;
     color: white;
@@ -119,7 +163,6 @@ header{
     font-size: medium;
 }
 
-
 .login-big ,.sign-up-big{
     background-color: rgb(236, 245, 118);
     color: rgb(7, 14, 23);
@@ -141,21 +184,11 @@ header{
     transition: all 0.2s ease; 
 }
 
-
 .login:hover, .sign-up:hover{
     background-color: rgb(155, 165, 21);
     color: rgb(3, 6, 10);
     box-shadow: 2px 2px 2px;
     scale: 1.15;
-    /* cursor: not-allowed; */
-}
-
-section{
-    background-image: url(images/_.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* height: 1000px; */
 }
 
 .ham {
@@ -193,10 +226,7 @@ section{
     transform: translateY(-2px) rotate(-45deg);
 }
 
-
-
 @media screen and (max-width:375px) {
-
     .ham {
         position: absolute;     
         top: 67px;             
@@ -208,11 +238,15 @@ section{
         border-right: none;
         padding: 20px;
     }
+    
 }
 
 @media screen and (min-width:769px) {
     .nav-lists-big{
         display: none;
+    }
+    .hero-section{
+        flex-direction: row;
     }
 }
 
@@ -227,15 +261,43 @@ section{
         display: none;
     }
     .burger-btn {
+        display: block; 
+    }
+    
+    .burger-btn svg line {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center; 
+    }
+
+    #menu:checked ~ .right-header .burger-btn svg line:nth-child(1) {
+        transform: translateY(2px) rotate(45deg);
+    }
+
+    #menu:checked ~ .right-header .burger-btn svg line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu:checked ~ .right-header .burger-btn svg line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg); 
+    }
+
+    #menu:checked ~ .ham {
         display: block;
     }
-    /* #menu:checked + .nav-lists-big{
-        display: block;
-    } */
-     #menu:checked + .ham{
-        display: block;
+
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
     }
-    /* .ham.open{
-        display: block;
-    } */
+    /* .hero-intro{
+        width: 100%;
+    }
+    .hero-desc{
+        width: 100%; */
+    /* } */
+    .hero-img{
+        width: 100%;
+    }
 }

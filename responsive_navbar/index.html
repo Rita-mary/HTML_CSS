@@ -11,14 +11,14 @@
         <div>
             <span>TakeAbit</span>
         </div>
+        <input type="checkbox" id="menu">
         <nav>
-            <ul class = "nav-lists">
+            <ul class="nav-lists">
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
-            
         </nav>
         
         <div class="right-header">
@@ -27,15 +27,6 @@
                 <button class="sign-up">Sign Up</button>
             </div>
             
-            <!-- <label for="menu" class="menu-icon">
-                <button class="burger-btn" aria-label="Toggle Menu">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </label> -->
             <label for="menu" class="menu-icon burger-btn" aria-label="Toggle Menu" role="button" tabindex="0">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
                     <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -43,28 +34,34 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </label>
-            
         </div>
-        
-        
-    </header>
-    <input type="checkbox" id="menu">
-    <div class="ham">
-        <div class="nav-lists-big">
+
+        <!-- Mobile-related elements moved cleanly inside the header tag -->
+        <div class="ham">
+            <div class="nav-lists-big">
                 <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
                 <div class="signs-big">
-                <button class="login-big">Login</button>
-                <button class="sign-up-big">Sign Up</button>
+                    <button class="login-big">Login</button>
+                    <button class="sign-up-big">Sign Up</button>
                 </div>
             </div>
-    </div>
-    <section>
-        
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div>
+            <h1 class="hero-intro">Welcome to TakeABit We love to take your orders</h1>
+            <p class="hero-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, soluta porro aliquid nam praesentium repellendus ipsa officiis unde possimus dolores? Commodi consectetur velit maiores, culpa ad necessitatibus praesentium voluptates amet animi porro obcaecati officiis inventore ea placeat exercitationem earum. Quibusdam iure assumenda quis sit, reprehenderit veritatis, quidem earum illum porro voluptate fugit! Dignissimos, enim, quia, molestias qui optio vero praesentium cum mollitia dicta numquam voluptas quis magnam doloribus asperiores reiciendis? Enim ipsa id modi excepturi, iure assumenda nisi commodi quisquam sequi, est nemo! Qui quos veritatis dolore ipsa aut ab, aperiam harum architecto fugit nulla, aspernatur deserunt pariatur accusamus nemo.</p>
+            <button class="hero-btn">Order now</button>
+        </div>
+        <div>
+            <img src="./images/_.jpeg" alt="Stream" class="hero-img">
+        </div>
     </section>
 
     <!-- <script>
@@ -76,7 +73,5 @@
             burgerBtn.classList.toggle('open');
         })
     </script> -->
-
-
 </body>
 </html>
