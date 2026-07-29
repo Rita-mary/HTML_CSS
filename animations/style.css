@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.parent{
+    background-color: purple;
+    height: 400px;
+}
+
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    animation-name: loop;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.parent2{
+    background-color: yellow;
+    margin-top: 4px;
+    height: 300px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.child2{
+    background-color: black;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    animation-name: bounce;
+    animation-duration: 10s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.parent3{
+    background-color: red;
+    margin-top: 4px;
+    height: 400px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center;
+    overflow: hidden; */
+}
+
+.child3{
+    background-color: purple;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    animation-name: mover;
+    overflow: hidden;
+    animation-duration: 10s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.parent4{
+    background-color: black;
+    margin-top: 4px;
+    height: 400px;
+    display: flex;  
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+}
+
+.child4{
+    background-color: green;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    animation-name: ball;
+    overflow: hidden;
+    animation-duration: 1s;
+    /* animation-delay: 3s; */
+    animation-timing-function: ease-in;
+    animation-iteration-count: 4;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes loop{
+    from{
+        transform: translateX(0px) scale(1);
+        background-color: black;
+    }
+    to{
+        transform: rotate(45deg) translateX(300px) scale(3);
+        background-color: green;
+    }
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(300px);
+    }
+}
+
+@keyframes mover {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translatex(300px);
+    }
+    50%{
+        transform: translateY(300px) translateX(300px);
+    }
+    75%{
+        transform: translateX(-300px) translateY(300px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ball{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(150px);
+    }
+}

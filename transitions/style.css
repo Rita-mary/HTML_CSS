@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.child {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: ease;
+  transition-delay: 2s;
+  /* transition: background-color 3s ease 2s; */
+}
+
+.child:hover {
+  background-color: yellow;
+  /* transform: translateX(50px); */
+  /* transform: translate(1000px); */
+  /* transform: rotate(60deg) translateX(400px); */
+  /* transform: scale(3); */
+}
+
+.parent2 {
+  background-image: linear-gradient(to bottom, purple, white);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: linear-gradient(to right, red, black);
+  padding: 20px 40px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  transition: all 1s linear;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: red;
+}
